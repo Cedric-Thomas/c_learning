@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 
 int main(int argc, char* argv[]){
 	char A[20];
@@ -6,7 +7,8 @@ int main(int argc, char* argv[]){
 	scanf("%s", A);
 
 	printf("nom %s\n", A);
-	printf("5 eme lettre %c\n", A[4]);
-
+	if (strlen(A) > 4) {
+		printf("5 eme lettre %c\n", A[4]);
+	}
 	return(0);
 }
