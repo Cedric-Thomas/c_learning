@@ -11,6 +11,4 @@ int main(int argc, char* argv[]){
 		printf("5 eme lettre %c\n", A[4]);
 	}
 	return(0);
-
-	blz blz bla
 }
