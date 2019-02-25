@@ -1,5 +1,12 @@
 #include <stdio.h>
 
+int min(int a, int b) {
+    if(a < b)
+      return a;
+    else
+      return b;
+}
+
 int main(void) {
 
   int x, y;
@@ -9,10 +16,7 @@ int main(void) {
   scanf("%d", &base);
   fflush(stdin);
   if(base%2 == 0)
-  {
-    printf("BASE CANNOT BE PAIR !\n");
     base++;
-  }
   printf("HAUTEUR => ");
   scanf("%d", &hauteur);
   fflush(stdin);
@@ -20,24 +24,18 @@ int main(void) {
 
   for (y=0; y < hauteur; y++) {
     for (x=0; x < base; x++) {
-      if (y==0 && x==base/2) {
-        printf("|");
-      }
-      else if (x==(base/2)-y) {
+      if (y==0 && x==base/2)
+        printf(".");
+      else if (x==(base/2)-y)
         printf("/");
-      }
-      else if (x==(base/2)+y) {
+      else if (x==(base/2)+y)
         printf("\\");
-      }
-      else if (y==base/2      && \
+      else if (y==min(base/2,hauteur-1) && \
                x > (base/2)-y && \
                x < (base/2)+y)
-      {
-        printf("-");
-      }
-      else {
+        printf("_");
+      else
         printf(" ");
-      }
     }
     printf("\n");
   }
