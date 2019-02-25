@@ -5,9 +5,9 @@ int main() {
   int hauteur;
   printf("TRIANGLE \n");
   printf("base: ");
-  scanf("%d\n", base);
+  scanf("%d", &base);
   printf("hauteur: ");
-  scanf("%d\n", hauteur);
-printf("%d %d\n", base, hauteur);
+  scanf("%d", &hauteur);
+  printf("%d %d\n", base, hauteur);
   return 0;
 }
