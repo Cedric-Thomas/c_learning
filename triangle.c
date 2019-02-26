@@ -15,7 +15,7 @@ int main() {
 
   printf("TRIANGLE: base=%d hauteur=%d\n", base, hauteur);
   for ( y = 0; y < hauteur; y++) {
-    for (x = 1; x < base;  x++) {
+    for (x = 0; x < base;  x++) {
     if (y == 0 && x==base/2)
     printf(".");
     else if(x ==base/2-y)
