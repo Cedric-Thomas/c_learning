@@ -23,7 +23,10 @@ int main() {
     else if(x ==base/2+y)
       printf("\\");
     else
-      printf(" ");
+      if(y==hauteur - 1)
+        printf("_");
+      else
+        printf(" ");
     }
   printf("\n");
 
