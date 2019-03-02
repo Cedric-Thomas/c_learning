@@ -1,4 +1,10 @@
 #include <stdio.h>
+int min(int a, int b){
+  if(a > b)
+  return b;
+  else
+  return a;
+}
 
 int main() {
   int x, y;
@@ -23,7 +29,7 @@ int main() {
     else if(x ==base/2+y)
       printf("\\");
     else
-      if(y==hauteur - 1 && x>(base/2)-y && x<(base/2)+y)
+      if(y==min(hauteur-1, base/2) && x>(base/2)-y && x<(base/2)+y)
         printf("_");
       else
         printf(" ");
